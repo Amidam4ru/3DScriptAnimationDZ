@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7415c25924224d46af660f428a6adda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SphereMover
-  _speed: 1
+  _moveSpeed: 1
 --- !u!135 &1710713737
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -933,7 +933,9 @@ GameObject:
   - component: {fileID: 2110603918}
   - component: {fileID: 2110603917}
   - component: {fileID: 2110603916}
-  - component: {fileID: 2110603915}
+  - component: {fileID: 2110603922}
+  - component: {fileID: 2110603921}
+  - component: {fileID: 2110603920}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -941,21 +943,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2110603915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110603914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8e800ff3d3dd04fbf478b672b13769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CubeTransformator
-  _scalingSpeed: 0.5
-  _rotateSpeed: 20
-  _moveSpeed: 8
 --- !u!65 &2110603916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1048,6 +1035,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110603920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110603914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9de5c0af3cb0084c9525d33ee38a41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scalator
+  _scalingSpeed: 0.05
+--- !u!114 &2110603921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110603914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a15e5ea6e26d14db23e75f2025a9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotator
+  _rotateSpeed: 20
+--- !u!114 &2110603922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110603914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7415c25924224d46af660f428a6adda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mover
+  _moveSpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
